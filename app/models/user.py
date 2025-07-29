@@ -42,10 +42,10 @@ class UserUpdate(BaseModel):
 
 
 class UserInDB(UserBase):
-    id: UUID = Field(..., description="User's unique identifier")
+    #id: UUID = Field(..., description="User's unique identifier")
     is_active: bool = Field(default=True, description="User's active status")
-    created_at: datetime = Field(..., description="User creation timestamp")
-    updated_at: datetime = Field(..., description="User last update timestamp")
+    #created_at: datetime = Field(..., description="User creation timestamp")
+    #updated_at: datetime = Field(..., description="User last update timestamp")
 
     class Config:
         from_attributes = True

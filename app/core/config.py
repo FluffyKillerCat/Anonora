@@ -1,5 +1,5 @@
 from pydantic_settings import BaseSettings
-from pydantic import Field
+from pydantic import Field, validator, field_validator
 from typing import Optional, List
 import os
 
@@ -24,7 +24,13 @@ class Settings(BaseSettings):
 
     upload_dir: str = Field(default="uploads", description="File upload directory")
     max_file_size: int = Field(default=50 * 1024 * 1024, ge=1024, description="Maximum file size in bytes")
-    allowed_extensions: List[str] = Field(default=[".pdf"], description="Allowed file extensions")
+    allowed_extensions: List[str]
+
+    @field_validator("allowed_extensions", mode="before")
+    def split_extensions(cls, v):
+        if isinstance(v, str):
+            return [item.strip() for item in v.split(",") if item.strip()]
+        return v
 
     sentence_transformer_model: str = Field(default="all-MiniLM-L6-v2", description="Sentence transformer model")
     zero_shot_model: str = Field(default="facebook/bart-large-mnli", description="Zero-shot classification model")
