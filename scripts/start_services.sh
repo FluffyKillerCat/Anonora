@@ -30,5 +30,5 @@ echo "Starting Celery beat for scheduled tasks..."
 celery -A app.celery_app beat --loglevel=info --daemon
 
 # Start FastAPI application
-echo "Starting FastAPI application..."
+echo " Starting FastAPI application..."
 python main.py 
