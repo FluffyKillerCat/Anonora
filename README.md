@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Version History
+## Version History
 
 - **v0.0.1** – Document upload, redaction (via OCR + Presidio), and embedding generation
 - **v0.0.2** – RAG-based search (implementation in progress — `ToDo`)
