@@ -61,16 +61,32 @@ async def health_check():
 @app.get("/status")
 async def status_check():
     from app.services.document_processing_service import DocumentProcessingService
+    from app.utils.redis_client import get_redis_client
 
     try:
         processing_service = DocumentProcessingService()
         services_status = processing_service.get_processing_services_status()
+        
+        # Check Redis connection
+        redis_client = get_redis_client()
+        redis_status = "connected" if redis_client.ping() else "disconnected"
+        
+        # Check Celery worker status (basic check)
+        try:
+            from app.celery_app import celery_app
+            inspect = celery_app.control.inspect()
+            active_workers = inspect.active()
+            worker_status = "running" if active_workers else "not running"
+        except Exception:
+            worker_status = "unknown"
 
         return {
             "status": "operational",
             "timestamp": datetime.utcnow().isoformat(),
             "version": settings.app_version,
-            "services": services_status
+            "services": services_status,
+            "redis": redis_status,
+            "celery_worker": worker_status
         }
     except Exception as e:
         return {

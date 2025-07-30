@@ -17,7 +17,8 @@ class EmbeddingService:
     def _load_model(self):
         try:
             logger.info(f"Loading sentence transformer model: {self.model_name}")
-            self.model = SentenceTransformer(self.model_name)
+            # Force CPU usage to avoid MPS issues on macOS
+            self.model = SentenceTransformer(self.model_name, device="cpu")
             logger.info("Sentence transformer model loaded successfully")
         except Exception as e:
             logger.error(f"Failed to load sentence transformer model: {e}")
