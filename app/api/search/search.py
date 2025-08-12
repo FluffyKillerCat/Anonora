@@ -44,7 +44,7 @@ async def search_documents(
         similar_docs = []
         for doc in accessible_documents:
             if doc.get("vector_embedding"):
-                similarity = processing_service.calculate_similarity(
+                similarity = processing_service.embedding_service.calculate_similarity(
                     query_embedding, doc["vector_embedding"]
                 )
 
@@ -163,6 +163,7 @@ async def question_answering(
     try:
         accessible_docs = []
         for doc_id in document_ids:
+            print(doc_id)
             doc = await _get_document_if_accessible(doc_id, current_user_id)
             if doc:
                 accessible_docs.append(doc)
