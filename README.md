@@ -7,7 +7,7 @@
 ## Version History
 
 - **v0.0.1** – Document upload, redaction (via OCR + Presidio), and embedding generation
-- **v0.0.2** – RAG-based search (implementation in progress — `ToDo`)
+- **v0.0.2** – RAG-based search (implementation in progress —)
 
 ---
 
@@ -16,7 +16,7 @@
 - Extract text from scanned PDFs using OCR  
 - Redact PII automatically with Microsoft Presidio  
 - Generate vector embeddings for semantic search  
-- Support for question answering using RAG (coming soon)  
+- Support for question answering using RAG   
 - Automatically tag and categorize uploaded documents  
 - Secure login and permission-based document access  
 

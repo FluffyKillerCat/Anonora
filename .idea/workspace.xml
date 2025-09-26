@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3569afc3-31ac-4f25-a362-cd7c8a88a012" name="Changes" comment="Bug Fixes">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -15,7 +16,6 @@
       <change beforePath="$PROJECT_DIR$/app/services/embedding_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/embedding_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/pdf_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/pdf_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supabase/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/supabase/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +134,7 @@
       <workItem from="1757507323600" duration="9412000" />
       <workItem from="1757524511728" duration="14004000" />
       <workItem from="1757574987388" duration="8704000" />
-      <workItem from="1758877522360" duration="356000" />
+      <workItem from="1758877522360" duration="778000" />
     </task>
     <task id="LOCAL-00001" summary="Bug Fixes">
       <option name="closed" value="true" />
