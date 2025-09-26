@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3569afc3-31ac-4f25-a362-cd7c8a88a012" name="Changes" comment="update(Readme)">
+    <list default="true" id="3569afc3-31ac-4f25-a362-cd7c8a88a012" name="Changes" comment="Bug Fixes">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/documents/documents.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/documents/documents.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/search/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/search/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/embedding_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/embedding_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/pdf_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/pdf_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/supabase/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +31,7 @@
         <option value="Python Script" />
         <option value="SQL File" />
         <option value="env" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -39,6 +50,9 @@
     &quot;accountId&quot;: &quot;aa08fc69-9bb1-46a5-8134-4162be6ce5ab&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Masterscool.pem" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -51,7 +65,6 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;FastAPI.Anonora.executor&quot;: &quot;Run&quot;,
-    &quot;Python.start_worker.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -60,7 +73,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Database&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -78,30 +91,7 @@
       <recent name="$PROJECT_DIR$/app/auth" />
     </key>
   </component>
-  <component name="RunManager" selected="FastAPI.Anonora">
-    <configuration name="start_worker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Anonora" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/start_worker.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="Anonora" type="Python.FastAPI">
       <option name="file" value="$PROJECT_DIR$/main.py" />
       <module name="Anonora" />
@@ -117,11 +107,6 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.start_worker" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -139,9 +124,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1753734110218</updated>
-      <workItem from="1753734111284" duration="28771000" />
-      <workItem from="1754316764042" duration="927000" />
-      <workItem from="1754989117863" duration="5764000" />
+      <workItem from="1753734111284" duration="26529000" />
+      <workItem from="1755598847729" duration="11636000" />
+      <workItem from="1755782979953" duration="3416000" />
+      <workItem from="1756237769552" duration="15816000" />
+      <workItem from="1756403533187" duration="26000" />
+      <workItem from="1756726015757" duration="5378000" />
+      <workItem from="1756885634293" duration="6620000" />
+      <workItem from="1757507323600" duration="9412000" />
+      <workItem from="1757524511728" duration="14004000" />
+      <workItem from="1757574987388" duration="8704000" />
+      <workItem from="1758877522360" duration="356000" />
     </task>
     <task id="LOCAL-00001" summary="Bug Fixes">
       <option name="closed" value="true" />
@@ -151,31 +144,7 @@
       <option name="project" value="LOCAL" />
       <updated>1753820582684</updated>
     </task>
-    <task id="LOCAL-00002" summary="Redis, Celery bug fixes">
-      <option name="closed" value="true" />
-      <created>1753864962069</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1753864962069</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update(scripts) updated start_services.sh messages">
-      <option name="closed" value="true" />
-      <created>1753865336753</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1753865336753</updated>
-    </task>
-    <task id="LOCAL-00004" summary="update(Readme)">
-      <option name="closed" value="true" />
-      <created>1753865425830</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1753865425830</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,10 +152,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bug Fixes" />
-    <MESSAGE value="Redis, Celery bug fixes" />
-    <MESSAGE value="update(scripts) updated start_services.sh messages" />
-    <MESSAGE value="update(Readme)" />
-    <option name="LAST_COMMIT_MESSAGE" value="update(Readme)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug Fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -199,11 +165,14 @@
           <url>file://$PROJECT_DIR$/app/services/ocr_service.py</url>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/services/embedding_service.py</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Anonora$start_worker.coverage" NAME="start_worker Coverage Results" MODIFIED="1754994430189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Anonora$Anonora.coverage" NAME="Anonora Coverage Results" MODIFIED="1754994447061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Anonora$Anonora.coverage" NAME="Anonora Coverage Results" MODIFIED="1757591465474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

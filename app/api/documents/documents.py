@@ -114,7 +114,6 @@ async def list_documents(
 
         result = supabase.table("documents").select("*").eq("owner_id", current_user_id).range(skip,
                                                                                                skip + limit - 1).execute()
-
         documents = []
         for doc in result.data:
             documents.append(Document(**doc))

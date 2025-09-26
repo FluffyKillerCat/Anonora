@@ -8,6 +8,7 @@ from app.api.documents.documents import router as documents_router
 from app.api.search.search import router as search_router
 import logging
 from datetime import datetime
+import psycopg2
 
 logging.basicConfig(
     level=logging.INFO,
@@ -38,6 +39,7 @@ app.add_middleware(
 app.include_router(auth_router)
 app.include_router(documents_router)
 app.include_router(search_router)
+
 
 
 @app.get("/")
@@ -121,7 +123,7 @@ if __name__ == "__main__":
 
     uvicorn.run(
         "app.main:app",
-        host="127.0.0.1",  # Use localhost for local testing
+        host="0.0.0.0",  # Use localhost for local testing
         port=8000,
         reload=settings.debug
     )

@@ -1,4 +1,11 @@
 .env
 
 /uploads/
+Dockerfile
+docker-compose.yml
+/supabase/
+/scripts/supabase/
+Masterscool.pem
+k.txt
+
 

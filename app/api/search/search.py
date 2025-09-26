@@ -163,7 +163,7 @@ async def question_answering(
     try:
         accessible_docs = []
         for doc_id in document_ids:
-            print(doc_id)
+
             doc = await _get_document_if_accessible(doc_id, current_user_id)
             if doc:
                 accessible_docs.append(doc)
@@ -185,7 +185,7 @@ async def question_answering(
         relevant_docs = []
         for doc in accessible_docs:
             if doc.get("vector_embedding"):
-                similarity = processing_service.calculate_similarity(
+                similarity = processing_service.embedding_service.calculate_similarity(
                     question_embedding, doc["vector_embedding"]
                 )
 
@@ -297,14 +297,24 @@ async def _get_document_if_accessible(doc_id: str, user_id: str) -> Optional[Dic
         supabase = db_manager.get_supabase()
 
         result = supabase.table("documents").select("*").eq("id", doc_id).execute()
+        if result:
+            t = result.data[0]
+            print(user_id)
+            print(type(user_id))
+            print(t['owner_id'] == user_id)
+            print(t['status'] == 'completed')
+            print(result.data[0])
+        else:
+            print('*********************************************************************')
 
         if not result.data:
             return None
 
         document = result.data[0]
 
-        if document["owner_id"] == user_id:
-            return document if document.get("status") == "completed" else None
+        if str(document["owner_id"]) == str(user_id):
+            if document.get("status") == "completed":
+                return document
 
         share_result = supabase.table("document_shares").select("*").eq("document_id", doc_id).eq("shared_with_user_id",
                                                                                                   user_id).execute()

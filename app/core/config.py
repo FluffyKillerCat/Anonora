@@ -17,7 +17,8 @@ class Settings(BaseSettings):
     supabase_key: str = Field(default="", description="Supabase API key")
     database_url: str = Field(default="", description="Database connection URL")
 
-    redis_url: str = Field(default="redis://localhost:6379", description="Redis connection URL")
+    redis_url: str = Field(default="redis://redis:6379", description="Redis connection URL")
+
 
     celery_broker_url: str = Field(default="redis://localhost:6379/0", description="Celery broker URL")
     celery_result_backend: str = Field(default="redis://localhost:6379/0", description="Celery result backend URL")

@@ -3,7 +3,7 @@ from typing import List, Dict, Any, Optional
 import numpy as np
 import logging
 from app.core.config import settings
-
+import uuid
 logger = logging.getLogger(__name__)
 
 
@@ -93,9 +93,15 @@ class EmbeddingService:
     
     def calculate_similarity(self, embedding1: List[float], embedding2: List[float]) -> float:
         try:
-            vec1 = np.array(embedding1)
+            embedding2 = eval(embedding2)
+
+
             vec2 = np.array(embedding2)
-            
+            vec1 = np.array(embedding1)
+
+            cosine_similarity = np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
+            return float(cosine_similarity)
+
             cosine_similarity = np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
             return float(cosine_similarity)
             
